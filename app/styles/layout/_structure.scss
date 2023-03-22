@@ -1,4 +1,12 @@
 body {
-  background: url("../images/breeze2.jpg") no-repeat center / cover;
-  min-height: 100vh;
+  font-size: 1.7rem;
+  font-family: $ff-primary;
+  background-color: #ccc;
+}
+.container {
+  $max-width: 1440px;
+  $padding: 10px;
+
+  width: min($max-width, 100% - $padding * 2);
+  margin-inline: auto;
 }

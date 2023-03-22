@@ -1,0 +1,238 @@
+.header {
+  background-color: #fff;
+  &-mobile {
+    display: none;
+    background-color: #f5f1e9;
+    &__list {
+      display: flex;
+      gap: 20px;
+    }
+    &__link {
+      display: inline-block;
+      color: #000;
+      padding: 4px;
+    }
+    &__title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-left: 5px;
+    }
+  }
+  &-content {
+    @include flexBox(center, space-between);
+  }
+  &-bar {
+    display: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+  &-logo {
+    max-width: 150px;
+  }
+  &-action {
+    &__list {
+      @include flexBox(center);
+    }
+    &__item {
+      &:not(:first-child) {
+        margin-left: 15px;
+      }
+      &:hover {
+        cursor: pointer;
+        color: $clr-hover;
+      }
+    }
+    &__icon {
+      font-size: 2.7rem;
+    }
+  }
+  @include maxWidth(1023.98px) {
+    &-mobile {
+      display: block;
+    }
+    &-bar {
+      display: block;
+      margin-right: 40px;
+    }
+    &-content {
+      justify-content: unset;
+      padding: 5px 0;
+    }
+    &-action {
+      margin-left: auto;
+      &__item:not(:first-child) {
+        margin-left: 40px;
+      }
+      &__item:nth-child(1) {
+        display: none;
+      }
+      &__item:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+}
+.navigation-primary {
+  &__header {
+    display: none;
+  }
+  &__sub {
+    $width: 230px;
+    $height-beaf: 10px;
+
+    position: absolute;
+    background-color: #fff;
+    top: calc(100% + $height-beaf);
+    left: calc(50% - $width / 2);
+    width: $width;
+    display: none;
+    box-shadow: 5px 10px 30px -5px rgba(0, 0, 0, 0.3);
+    & .navigation-primary__sub {
+      left: 100%;
+      top: 0;
+      display: none;
+      &::before {
+        @include size(0);
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      @include size($width, $height-beaf);
+      background-color: transparent;
+      top: -$height-beaf;
+      left: 0;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      @include size(15px);
+      background-color: #fff;
+      top: -11px;
+      left: 50%;
+      transform: rotate(45deg) translateY(50%);
+      z-index: -1;
+    }
+
+    & .navigation-primary__link {
+      padding: 8px 8px;
+      @include flexBox(center, space-between);
+      &:hover {
+        background-color: $clr-hover;
+      }
+      &:hover .navigation-primary__title {
+        color: #fff;
+      }
+      &:hover .navigation-primary__icon {
+        color: #fff;
+      }
+    }
+    & .navigation-primary__title,
+    .navigation-primary__icon {
+      color: $clr-menu;
+    }
+  }
+  &__list {
+    @include flexBox(center);
+  }
+  &__item {
+    position: relative;
+    &:hover > .navigation-primary__sub {
+      display: block;
+    }
+  }
+  &__link {
+    @include flexBox(center);
+    color: $clr-menu;
+    padding: 30px 8px;
+    &:hover {
+      color: $clr-hover;
+    }
+  }
+  &__title {
+    margin-right: 3px;
+  }
+  @include maxWidth(1023.98px) {
+    width: 87vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    box-shadow: 5px 10px 30px -5px rgba(0, 0, 0, 0.3);
+    transform: translateX(-100%);
+    background-color: #f5f1e9;
+    transition: all 0.25s linear;
+
+    &.is-show {
+      transform: translateX(0);
+    }
+    &__sub {
+      position: unset;
+      display: block;
+      box-shadow: none;
+      background-color: #f5f1e9;
+      width: 100%;
+      & > .navigation-primary__item {
+        padding: 0 6px;
+      }
+      & .navigation-primary__title {
+        text-transform: capitalize;
+        font-weight: 400;
+      }
+      & .navigation-primary__sub {
+        display: block;
+      }
+      & .navigation-primary__link:hover {
+        background-color: #f5f1e9;
+      }
+      & .navigation-primary__link:hover {
+        & .navigation-primary__title {
+          color: $clr-hover;
+        }
+      }
+      & .navigation-primary__link:hover {
+        & .navigation-primary__icon {
+          color: $clr-hover;
+        }
+      }
+    }
+    &__header {
+      background-color: $clr-hover;
+      color: #fff;
+      padding: 0 10px;
+      @include flexBox(center, space-between);
+      &-menu {
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      &-ic {
+        cursor: pointer;
+        font-size: 1.8rem;
+        padding: 13px;
+      }
+    }
+    &__list {
+      flex-direction: column;
+      overflow-y: auto;
+      height: 100%;
+    }
+    &__item {
+      width: 100%;
+    }
+    &__link {
+      justify-content: space-between;
+      padding: 8px 8px;
+      &:hover {
+        color: rgb(82, 82, 82);
+      }
+    }
+    &__title {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+mixin navigationItem(title = "this is title", href = "#!", i = "bottom")
+    li.navigation-primary__item
+        a.navigation-primary__link(href= href)
+            span.navigation-primary__title= title
+            if i === "bottom"
+                i.fas.fa-caret-down.navigation-primary__icon
+            else if i === "left"
+                i.fas.fa-caret-right.navigation-primary__icon
+            else
+                i
+        if block 
+            block

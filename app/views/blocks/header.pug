@@ -1,2 +1,105 @@
-header.header This is header really?
-  i.fal.fa-user
+header.header 
+  .header-mobile
+    .container
+      .header-mobile__list 
+        .header-mobile__item
+          a.header-mobile__link(href="#!") 
+            i.fas.fa-home-alt.header-mobile__ic
+            span.header-mobile__title Home
+        .header-mobile__item
+          a.header-mobile__link(href="#!") 
+            i.fas.fa-sign-in.header-mobile__ic
+            span.header-mobile__title Login
+        .header-mobile__item
+          a.header-mobile__link(href="#!") 
+            i.fas.fa-registered.header-mobile__ic
+            span.header-mobile__title Register
+  .container 
+    .header-content 
+      // --Bar-Mobile--
+      i.far.fa-bars.header-bar
+      // --Logo--
+      a.header-logo(href="#!")
+        img.header-img(src="images/navbar_logo.png")
+      // --Navigation--
+      nav.navigation-primary
+        .navigation-primary__header 
+          span.navigation-primary__header-menu Menu 
+          i.far.fa-times.navigation-primary__header-ic
+        ul.navigation-primary__list(role="list")
+          +navigationItem("Products Category")
+            ul.navigation-primary__sub(role="list")
+              +navigationItem("Sales", "#!", "left")
+                ul.navigation-primary__sub(role="list")    
+                  +navigationItem("Month And Sales", "#!", "none")              
+                  +navigationItem("Kids Collection", "#!", "none")            
+              +navigationItem("Shop By Brand", "#!", "left")  
+                ul.navigation-primary__sub(role="list")    
+                  +navigationItem("Month And Sales", "#!", "none")              
+                  +navigationItem("Kids Collection", "#!", "none")               
+              +navigationItem("Sales", "#!", "left") 
+                ul.navigation-primary__sub(role="list")    
+                  +navigationItem("Month And Sales", "#!", "none")              
+                  +navigationItem("Kids Collection", "#!", "none")             
+                  +navigationItem("Month And Sales", "#!", "none")              
+                  +navigationItem("Kids Collection", "#!", "none")             
+                  +navigationItem("Month And Sales", "#!", "none")              
+                  +navigationItem("Kids Collection", "#!", "none")             
+                  +navigationItem("Month And Sales", "#!", "none")              
+                  +navigationItem("Kids Collection", "#!", "none")             
+              +navigationItem("Sales", "#!", "left")
+              ul.navigation-primary__sub(role="list")    
+                  +navigationItem("Month And Sales", "#!", "none")              
+                  +navigationItem("Kids Collection", "#!", "none")             
+                  +navigationItem("Month And Sales", "#!", "none")              
+                  +navigationItem("Kids Collection", "#!", "none")             
+                  +navigationItem("Month And Sales", "#!", "none")              
+                  +navigationItem("Kids Collection", "#!", "none")             
+              +navigationItem("Sales", "#!", "left")              
+              +navigationItem("Sales", "#!", "left")              
+              +navigationItem("Sales", "#!", "none")              
+              +navigationItem("Sales", "#!", "left")              
+              +navigationItem("Sales", "#!", "left")              
+              +navigationItem("Sales", "#!", "left")              
+              +navigationItem("Sales", "#!", "left")              
+              +navigationItem("Sales", "#!", "none")              
+              +navigationItem("Sales", "#!", "left")                            
+          +navigationItem("Special", "#!", "none")
+          +navigationItem("New Arrival", "#!", "none")
+          +navigationItem("Master Series", "#!", "none")
+          +navigationItem("Sales", "#!", "bottom") 
+            ul.navigation-primary__sub(role="list")
+              +navigationItem("Blog", "#!", "none")
+              +navigationItem("Blog", "#!", "none")
+              +navigationItem("Blog", "#!", "none")
+              +navigationItem("Blog", "#!", "none")
+              +navigationItem("Blog", "#!", "none") 
+          +navigationItem("Collection", "#!", "bottom")
+            ul.navigation-primary__sub(role="list")
+              +navigationItem("Blog", "#!", "none")
+              +navigationItem("Blog", "#!", "none")
+              +navigationItem("Blog", "#!", "none")
+              +navigationItem("Blog", "#!", "none")
+              +navigationItem("Blog", "#!", "none")
+          +navigationItem("Blog", "#!", "bottom")  
+            ul.navigation-primary__sub(role="list")
+              +navigationItem("Blog", "#!", "none")
+              +navigationItem("Blog", "#!", "none")
+              +navigationItem("Blog", "#!", "none")
+              +navigationItem("Blog", "#!", "none")
+              +navigationItem("Blog", "#!", "none")
+          +navigationItem("Tips", "#!", "none")           
+          +navigationItem("About Us", "#!", "none")           
+          +navigationItem("Store Locator", "#!", "none")
+      // --Header-Action  --        
+      .header-action
+        .header-action__list 
+          .header-action__item 
+            i.fas.fa-user-circle.header-action__icon
+          .header-action__item 
+            i.far.fa-heart.header-action__icon
+          .header-action__item 
+            i.far.fa-search.header-action__icon
+          .header-action__item 
+            i.far.fa-shopping-cart.fa-flip-horizontal.header-action__icon
+        
