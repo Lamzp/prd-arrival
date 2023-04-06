@@ -7,7 +7,7 @@ window.addEventListener("load", function () {
   );
 
   const navigationPrimaryItem = document.querySelectorAll(
-    ".navigation-primary__item"
+    ".navigation-primary__link"
   );
 
   // handle toggle menu
@@ -39,9 +39,27 @@ window.addEventListener("load", function () {
   //Toggle navigation item
   [...navigationPrimaryItem].forEach((item) => {
     item.addEventListener("click", (e) => {
-      const subMenu = e.target.querySelector(".navigation-primary__sub");
+      const subMenu = e.target.nextElementSibling;
       subMenu && subMenu.classList.toggle("is-show");
-      console.log(e.target);
     });
+  });
+
+  const progressContent = document.querySelector(".autoplay-progress span");
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    on: {},
   });
 }); // end load document

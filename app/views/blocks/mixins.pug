@@ -2,6 +2,7 @@ mixin navigationItem(title = "this is title", href = "#!", i = "bottom")
     li.navigation-primary__item
         a.navigation-primary__link(href= href)
             span.navigation-primary__title= title
+            i.far.fa-plus-circle.navigation-primary__icon-mobile
             if i === "bottom"
                 i.fas.fa-caret-down.navigation-primary__icon
             else if i === "left"
@@ -10,3 +11,11 @@ mixin navigationItem(title = "this is title", href = "#!", i = "bottom")
                 i
         if block 
             block
+
+mixin infoMemberItem(title = "this is title", desc = "this is desc")
+    .info-member__item 
+        .info-member__icon 
+            i.fas.fa-star.info-member__ic
+        .info-member__right 
+            h4.info-member__title= title 
+            p.info-member__desc= desc

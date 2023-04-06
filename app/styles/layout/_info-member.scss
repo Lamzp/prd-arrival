@@ -1,0 +1,52 @@
+.info-member {
+  $bg: #f7f5f1;
+
+  @include bg($bg);
+  box-shadow: 0 -5px 20px -5px rgba(0, 0, 0, 0.2);
+  &__content {
+    padding: 0 40px;
+  }
+  &__list {
+    display: flex;
+  }
+  &__item {
+    width: calc(100% / 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+  }
+  &__icon {
+    $cricle: 65px;
+    $bg: #dc0212;
+
+    @include size($cricle);
+    @include bg($bg);
+    border-radius: 50%;
+    display: grid;
+  }
+  &__ic {
+    margin: auto;
+    font-size: 2.8rem;
+    color: #fff;
+  }
+  &__right {
+    margin-left: 15px;
+    max-width: 200px;
+    font-size: 1.5rem;
+    line-height: 1.53;
+  }
+  &__title {
+    $color-text: rgba(0, 0, 0, 1);
+
+    color: $color-text;
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &__desc {
+    $color-text: rgba(89, 96, 119, 1);
+    color: $color-text;
+    font-size: 1.5rem;
+  }
+}
