@@ -44,8 +44,8 @@ window.addEventListener("load", function () {
     });
   });
 
-  const progressContent = document.querySelector(".autoplay-progress span");
   var swiper = new Swiper(".mySwiper", {
+    speed: 600,
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
@@ -59,6 +59,22 @@ window.addEventListener("load", function () {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+    on: {},
+  });
+  var swiper = new Swiper(".new-arrival__mySwiper", {
+    speed: 2000,
+    slidesPerView: 6,
+    slidesPerGroup: 6,
+    spaceBetween: 30,
+    // centeredSlides: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".new-arrival__swiper-button-next",
+      prevEl: ".new-arrival__swiper-button-prev",
     },
     on: {},
   });

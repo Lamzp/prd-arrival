@@ -19,3 +19,13 @@ mixin infoMemberItem(title = "this is title", desc = "this is desc")
         .info-member__right 
             h4.info-member__title= title 
             p.info-member__desc= desc
+
+mixin headingSection(title = "this is heading 2")
+    h2.heading-secondary= title
+
+mixin categoryItem(title = "product", src = "images/default-product-image.jpg", alt = "img" , href="#!")
+    .category__item 
+        a.category__link(href= href)
+            img.category__img(src= src, alt= alt)
+            .category__overlay 
+                h3.category__heading-third= title 

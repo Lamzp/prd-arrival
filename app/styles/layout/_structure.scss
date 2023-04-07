@@ -11,3 +11,12 @@ body {
   width: min($max-width, 100% - $padding * 2);
   margin-inline: auto;
 }
+.heading-secondary {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #38444f;
+  text-transform: uppercase;
+  @include maxWidth(480px) {
+    font-size: 2.4rem;
+  }
+}
