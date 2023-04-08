@@ -590,18 +590,91 @@ body {
   }
 }
 
-.swiper-slide {
-  height: 100%;
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.new-arrival {
+  padding: 20px 85px;
 }
-
 .new-arrival__test {
   background-color: #8f8;
-  width: 200px;
-  height: 200px;
+}
+.new-arrival__swiper-button-next.swiper-button-next,
+.new-arrival .new-arrival__swiper-button-prev.swiper-button-prev {
+  background-color: #38444f;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+}
+.new-arrival__swiper-button-next.swiper-button-next {
+  right: 0;
+}
+.new-arrival__swiper-button-prev.swiper-button-prev {
+  left: 0;
+}
+.new-arrival__mySwiper.swiper-pagination {
+  background-color: black;
+  bottom: 0;
+  transform: translateY(50%);
+}
+.new-arrival__images {
+  position: relative;
+  padding: 10px;
+  width: 100%;
+}
+.new-arrival__item.swiper-slide {
+  position: relative;
+  display: block;
+  border-radius: 7px;
+  border-color: rgb(223, 231, 247);
+  padding-bottom: 30px;
+}
+.new-arrival__item.swiper-slide:hover .new-arrival__images .new-arrival__img--secondary {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+.new-arrival__item.swiper-slide:hover .new-arrival__button {
+  opacity: 1;
+  transform: translateY(-20%);
+  z-index: 1;
+}
+.new-arrival__img {
+  object-fit: cover;
+  width: 100%;
+}
+.new-arrival__img--secondary {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.25s linear;
+}
+.new-arrival__name {
+  padding: 0 10px;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #000;
+}
+.new-arrival__price {
+  text-align: center;
+  color: #8e8e8e;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 8px;
+}
+.new-arrival__price-down {
+  color: #555;
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+.new-arrival__button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 0.15s;
 }

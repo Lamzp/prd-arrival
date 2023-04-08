@@ -29,3 +29,18 @@ mixin categoryItem(title = "product", src = "images/default-product-image.jpg", 
             img.category__img(src= src, alt= alt)
             .category__overlay 
                 h3.category__heading-third= title 
+
+mixin productSlide(nameProduct = "name product", priceProduct = "RM 259.00", priceDown = "this is price down", srcPrimary = "images/default-product-image.jpg", srcSecondary = "images/default-product-image.jpg", href = "#!")
+    .new-arrival__item.swiper-slide
+        a.swiper-slide__link(href= href)
+            .new-arrival__images
+                img.new-arrival__img.new-arrival__img--primary(src= srcPrimary, alt="") 
+                img.new-arrival__img.new-arrival__img--secondary(src= srcSecondary, alt="")
+            h4.new-arrival__name= nameProduct
+            p.new-arrival__price= priceProduct
+            p.new-arrival__price-down= priceDown
+        .new-arrival__button 
+            a.new-arrival__btn-link(href= href)
+                button.btn
+                    i.fal.fa-cart-plus.fa-flip-horizontal
+                    span Add to cart 

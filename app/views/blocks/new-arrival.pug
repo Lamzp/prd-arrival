@@ -3,55 +3,33 @@ section.new-arrival
         .new-arrival__content
             .swiper.new-arrival__mySwiper
                 .swiper-wrapper
-                    .swiper-slide
+                    .new-arrival__item.swiper-slide
                         a.swiper-slide__link(href="#!")
-                            .swiper-slide
-                                .new-arrival__test 1
-                    .swiper-slide
-                        a.swiper-slide__link(href="#!")
-                            .swiper-slide 
-                                .new-arrival__test 2
-                    .swiper-slide
-                        a.swiper-slide__link(href="#!")
-                            .swiper-slide
-                                .new-arrival__test 3
-                    .swiper-slide
-                        a.swiper-slide__link(href="#!")
-                            .swiper-slide
-                                .new-arrival__test 4
-                    .swiper-slide
-                        a.swiper-slide__link(href="#!")
-                            .swiper-slide
-                                .new-arrival__test 5
-                    .swiper-slide
-                        a.swiper-slide__link(href="#!")
-                            .swiper-slide
-                                .new-arrival__test 6
-                    .swiper-slide
-                        a.swiper-slide__link(href="#!")
-                            .swiper-slide
-                                .new-arrival__test 7
-                    .swiper-slide
-                        a.swiper-slide__link(href="#!")
-                            .swiper-slide
-                                .new-arrival__test 8
-                    .swiper-slide
-                        a.swiper-slide__link(href="#!")
-                            .swiper-slide
-                                .new-arrival__test 9
-                    .swiper-slide
-                        a.swiper-slide__link(href="#!")
-                            .swiper-slide
-                                .new-arrival__test 10
-                    .swiper-slide
-                        a.swiper-slide__link(href="#!")
-                            .swiper-slide
-                                .new-arrival__test 11
-                    .swiper-slide
-                        a.swiper-slide__link(href="#!")
-                            .swiper-slide
-                                .new-arrival__test 12
-                .new-arrival__swiper-button-next
+                            .new-arrival__images
+                                img.new-arrival__img.new-arrival__img--primary(src="images/product-test-primary.png", alt="") 
+                                img.new-arrival__img.new-arrival__img--secondary(src="images/product-test-secondary.png", alt="")
+                            h4.new-arrival__name COLEMAN 2 GAL CHILLER STACKER JUG (OCEAN)
+                            p.new-arrival__price RM259.00
+                            p.new-arrival__price-down Lorem ipsum dolor sit amet consectetur.
+                        .new-arrival__button 
+                            a.new-arrival__btn-link(href="#!")
+                                button.btn
+                                    i.fal.fa-cart-plus.fa-flip-horizontal
+                                    span Add to cart 
+                    +productSlide()
+                    +productSlide()
+                    +productSlide()
+                    +productSlide()
+                    +productSlide()
+                    +productSlide()
+                    +productSlide()
+                    +productSlide()
+                    +productSlide()
+                    +productSlide()
+                    +productSlide()
+                .new-arrival__swiper-button-next.swiper-button-next
                     i.far.fa-chevron-right
-                .new-arrival__swiper-button-prev
+                .new-arrival__swiper-button-prev.swiper-button-prev
                     i.far.fa-chevron-left
+                .swiper-pagination.new-arrival__mySwiper
+                .autoplay-progress

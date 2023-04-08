@@ -61,6 +61,10 @@ window.addEventListener("load", function () {
       delay: 3500,
       disableOnInteraction: false
     },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
     navigation: {
       nextEl: ".new-arrival__swiper-button-next",
       prevEl: ".new-arrival__swiper-button-prev"
