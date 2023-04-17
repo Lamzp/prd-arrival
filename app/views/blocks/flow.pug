@@ -1,0 +1,21 @@
+section.flow 
+    .flow__content 
+        .flow__left 
+            .flow__left-content
+                +headingSection3("Follow Us")(class="fs-40")
+                +headingSection4("On Social Media")(class="fs-50") 
+                .flow__btns
+                    a.flow__btn-link(href="#!")
+                        +btnContact("Facebook")
+                    a.flow__btn-link(href="#!")
+                        +btnContact("Ins", "fab fa-instagram")
+        .flow__right
+            .flow__right-content
+                +headingSection("newsletter")(class="uppercase fs-40")
+                p.flow__desc Stay up to date with news and promotions by signing up for our newsletter
+                .flow__email 
+                    input.flow__input(type="text" placeholder="Your email")
+                    a.flow__btn-link(href="#!")
+                        +btnContact("Send", "fas fa-envelope")(class="btn-contact--send")
+            
+

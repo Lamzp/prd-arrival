@@ -1,0 +1,16 @@
+extends layout/layout
+
+block vars 
+    -title = 'New Arrival'
+    -bodyClass = 'new-product'
+
+block container
+    include blocks/hero-header
+    .container 
+        .main-content 
+            include blocks/siderbar
+            main.main-new 
+                +mainBanner()
+                include blocks/product-new
+        include blocks/category
+                

@@ -1,0 +1,13 @@
+.product-new {
+  &__show {
+  }
+  &__form-show {
+  }
+  &__product {
+  }
+  &__product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}

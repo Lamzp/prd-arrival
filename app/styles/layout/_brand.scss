@@ -1,0 +1,7 @@
+.brand {
+  background-color: #f9f9f9;
+  &__list {
+    display: flex;
+    gap: 10px;
+  }
+}

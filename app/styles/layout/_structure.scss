@@ -15,8 +15,128 @@ body {
   font-size: 3.2rem;
   font-weight: 700;
   color: #38444f;
-  text-transform: uppercase;
+  text-transform: capitalize;
   @include maxWidth(480px) {
     font-size: 2.4rem;
+  }
+  &.center {
+    text-align: center;
+  }
+  &.uppercase {
+    text-transform: uppercase;
+  }
+  &.fs-40 {
+    font-size: 4rem;
+  }
+  &.fs-50 {
+    font-size: 5rem;
+  }
+}
+.btn-contact {
+  $height: 50px;
+
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  height: $height;
+  width: 255px;
+  min-width: 255px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: 2px solid transparent;
+  border: 2px solid $clr-heading;
+  border-radius: 999px;
+  overflow: hidden;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 160ms ease-in;
+  color: $clr-heading;
+  &:hover {
+    background-color: $clr-heading;
+    color: #fff;
+  }
+  &:active {
+    transform: scale(0.96);
+  }
+  &__icons,
+  .btn-contact__text {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  &__text {
+    margin-left: 7px;
+  }
+}
+.btn-contact.btn-contact--send {
+  width: 95px;
+  min-width: 95px;
+  border-radius: 3px;
+  border: 3px solid $clr-hover;
+  background-color: $clr-hover;
+  color: #fff;
+  &:hover {
+    background-color: #008add;
+    border: 3px solid #008add;
+  }
+}
+.heading-primary {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #38444f;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  position: relative;
+  text-align: center;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 5px;
+    background-color: $clr-hover;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.product {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #dfe7f7;
+  border-radius: 7px;
+  padding: 7px 7px 15px 7px;
+  &__link {
+    color: #38444f;
+  }
+  &__images {
+    position: relative;
+    width: 100%;
+    border: 1px solid #008add;
+  }
+  &__img {
+    border: 1px solid red;
+    width: 100%;
+    object-fit: cover;
+  }
+  &__img--secondary {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+  }
+  &__name {
+  }
+  &__price {
+  }
+  &__price-down {
+  }
+  &__button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 }

@@ -4,10 +4,19 @@
 @import "helpers/variables";
 @import "helpers/global";
 
+@import "pages/structure";
+
 @import "layout/structure";
 @import "layout/header";
-@import "layout/slide-header.scss";
-@import "layout/info-member.scss";
-@import "layout/gird-category.scss";
-@import "layout/category.scss";
-@import "layout/new-arrival.scss";
+@import "layout/slide-header";
+@import "layout/info-member";
+@import "layout/gird-category";
+@import "layout/category";
+@import "layout/new-arrival";
+@import "layout/blog";
+@import "layout/flow";
+@import "layout/brand";
+
+@import "layout/hero-header";
+@import "layout/siderbar";
+@import "layout/product-new";

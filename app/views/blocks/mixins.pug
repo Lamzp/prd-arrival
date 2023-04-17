@@ -20,8 +20,17 @@ mixin infoMemberItem(title = "this is title", desc = "this is desc")
             h4.info-member__title= title 
             p.info-member__desc= desc
 
+mixin headingPrimaryOnePage(title = "this is heading Primary")
+    h1.heading-primary= title
+
 mixin headingSection(title = "this is heading 2")
-    h2.heading-secondary= title
+    h2(class!=attributes.class).heading-secondary= title
+
+mixin headingSection3(title = "this is heading 3")
+    h3(class!=attributes.class).heading-secondary= title
+
+mixin headingSection4(title = "this is heading 4")
+    h4(class!=attributes.class).heading-secondary= title
 
 mixin categoryItem(title = "product", src = "images/default-product-image.jpg", alt = "img" , href="#!")
     .category__item 
@@ -44,3 +53,28 @@ mixin productSlide(nameProduct = "name product", priceProduct = "RM 259.00", pri
                 button.btn
                     i.fal.fa-cart-plus.fa-flip-horizontal
                     span Add to cart 
+
+mixin product(nameProduct = "name product", priceProduct = "RM 259.00", priceNumberDown = "12%", priceDown = "this is price down", srcPrimary = "images/product-test-primary.png", srcSecondary = "images/product-test-secondary.png", href = "#!")
+    .product
+        a.product__link(href="#!")
+            .product__images    
+                img.product__img.product__img--primary(src= srcPrimary, alt="") 
+                img.product__img.product__img--secondary(src= srcSecondary, alt="") 
+            h4.product__name= nameProduct 
+            p.product__price= priceProduct 
+            p.product__price-down= priceDown
+        .product__button 
+            a.product__btn-link(href= href)
+                button.btn
+                    i.fal.fa-cart-plus.fa-flip-horizontal
+                    span Add to cart 
+
+mixin btnContact(text = "tis text", icon ="fab fa-facebook-square")
+    button(class!=attributes.class).btn-contact
+        span.btn-contact__icons
+            i(class!=icon)
+        span.btn-contact__text= text
+
+mixin mainBanner(src = "images/slide-4.jpg", alt = "panner")
+     .banner
+        img.banner__image(src= src, alt= alt)

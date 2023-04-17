@@ -4,6 +4,7 @@ window.addEventListener("load", function () {
   const menu = document.querySelector(".navigation-primary");
   const closeMenuMobile = document.querySelector(".navigation-primary__header-ic");
   const navigationPrimaryItem = document.querySelectorAll(".navigation-primary__link");
+  const navSecondaryToggle = this.document.querySelectorAll(".nav-secondary__link");
 
   // handle toggle menu
   function handleToggleMenu(e) {
@@ -26,11 +27,23 @@ window.addEventListener("load", function () {
   // add event click handle click outside
   document.addEventListener("click", handleClickOutside);
 
-  //Toggle navigation item
+  // Toggle navigation item
   [...navigationPrimaryItem].forEach(item => {
     item.addEventListener("click", e => {
       const subMenu = e.target.nextElementSibling;
       subMenu && subMenu.classList.toggle("is-show");
+    });
+  });
+
+  // Toggle aside
+  [...navSecondaryToggle].forEach(item => {
+    item.addEventListener("click", e => {
+      const content = e.target.nextElementSibling;
+      content.style.height = `${content.scrollHeight}px`;
+      content.classList.toggle("is-active");
+      if (!content.classList.contains("is-active")) {
+        content.style.height = "0px";
+      }
     });
   });
   var swiper = new Swiper(".mySwiper", {
@@ -68,6 +81,26 @@ window.addEventListener("load", function () {
     navigation: {
       nextEl: ".new-arrival__swiper-button-next",
       prevEl: ".new-arrival__swiper-button-prev"
+    },
+    on: {}
+  });
+  var blog = new Swiper(".blog__mySwiper", {
+    speed: 2000,
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    spaceBetween: 30,
+    // centeredSlides: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".blog__swiper-button-next",
+      prevEl: ".blog__swiper-button-prev"
     },
     on: {}
   });
